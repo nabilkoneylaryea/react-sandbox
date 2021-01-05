@@ -1,3 +1,14 @@
 *{
   font-family: 'Space Mono', monospace;
 }
+.animation-blink{
+  animation-name: blink;
+  animation-duration: .5s;
+  animation-delay: 1s;
+  animation-timing-function: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes blink{
+  100%{color: transparent}
+}
