@@ -17,7 +17,7 @@ class Input extends Component {
             id: v4(),
             title: this.state.input
         }
-        this.props.addItem(newItem)
+        this.props.addItem(newItem);
         this.setState(state => ({
             input: ''
         }))

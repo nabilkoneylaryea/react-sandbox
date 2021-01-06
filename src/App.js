@@ -56,12 +56,24 @@ class App extends Component {
       items: newItems
     }))
   }
+  // DELETE ITEM
+  deleteItem = (id) => {
+    const newItems = this.state.items.filter(item => {
+      return item.id !== id;
+    })
+    console.log(newItems);
+    this.setState(state => ({
+      items: newItems
+    }))
+    console.log('Deleted');
+    console.log(this.state.items);
+  }
   render() {
     return (
       <div>
         <Header addItem={this.addItem}/>
         <div className="mt-2 p-3 row row-cols-3 g-4">
-          <Items items={this.state.items} editItem={this.editItem}/>
+          <Items items={this.state.items} editItem={this.editItem} deleteItem={this.deleteItem}/>
         </div>
       </div>
     )

@@ -1,6 +1,12 @@
 *{
   font-family: 'Space Mono', monospace;
 }
+.item{
+  transition: .2s;
+}
+.item:hover{
+  cursor: pointer;
+}
 .animation-blink{
   animation-name: blink;
   animation-duration: .7s;
