@@ -10,6 +10,6 @@
   animation-timing-function: steps(1, start);
 }
 @keyframes blink{
-  0% {}
   50%{color: transparent}
 }
+
