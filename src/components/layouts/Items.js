@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Item from './SingleItem';
+
 export class Items extends Component {
     render() {
         console.log(this.props.items)
@@ -8,6 +9,7 @@ export class Items extends Component {
                 // console.log(item.title)
                 
                 <Item key={item.id} id={item.id} title={item.title} editItem={this.props.editItem} />
+                
             )
         )
     }
