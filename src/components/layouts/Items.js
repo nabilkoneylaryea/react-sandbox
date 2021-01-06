@@ -1,14 +1,12 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
+import Item from './SingleItem';
 export class Items extends Component {
     render() {
         console.log(this.props.items)
         return (
-            this.props.items.map((item) => 
+            this.props.items.map(item => 
                 // console.log(item.title)
-                <div style={{color: 'white'}}>
-                    <h1>{item.title}</h1>
-                </div>
+                <Item title={item.title} />
             )
         )
     }

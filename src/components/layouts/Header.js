@@ -16,7 +16,7 @@ class Header extends Component {
                         Hello World<span className="animation-blink">_</span>
                     </h1>
                     <span>
-                        <InputBar />
+                        <InputBar addItem={this.props.addItem} />
                     </span>
                 </div>
             </header>

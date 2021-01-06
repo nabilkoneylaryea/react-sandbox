@@ -47,9 +47,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header addItem={this.addItem}/>
         <div className="row row-cols-3">
-          <Items items={this.state.items} addItem={this.addItem} />
+          <Items items={this.state.items}/>
         </div>
       </div>
     )
