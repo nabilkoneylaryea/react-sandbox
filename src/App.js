@@ -48,7 +48,7 @@ class App extends Component {
     return (
       <div>
         <Header addItem={this.addItem}/>
-        <div className="row row-cols-3">
+        <div className="mt-2 p-3 row row-cols-3 g-4">
           <Items items={this.state.items}/>
         </div>
       </div>

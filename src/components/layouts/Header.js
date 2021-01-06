@@ -2,12 +2,6 @@ import React, { Component } from 'react'
 import InputBar from './Input';
 
 class Header extends Component {
-    addItem(e){
-        // console.log(e.target);
-        // inputBar.classList.add('animation-expand');
-        console.log(InputBar);
-        // inputBar.classList.remove('animation-expand');
-    }
     render() {
         return (
             <header className="bg-white m-auto p-3 text-center">
