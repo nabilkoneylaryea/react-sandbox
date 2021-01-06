@@ -37,11 +37,23 @@ class App extends Component {
       },
     ]
   }
-  
-  // ADD ITEMS
+  // ADD ITEM
   addItem = (item) => {
+    // this.state.items.unshift(item);
     this.setState(state => ({
       items: [...this.state.items, item]
+    }))
+  }
+  // EDIT ITEM
+  editItem = (id, newTitle) => {
+    const newItems = this.state.items.map(item => {
+      if(item.id === id){
+        item.title = newTitle
+      }
+      return item;
+    })
+    this.setState(state => ({
+      items: newItems
     }))
   }
   render() {
@@ -49,7 +61,7 @@ class App extends Component {
       <div>
         <Header addItem={this.addItem}/>
         <div className="mt-2 p-3 row row-cols-3 g-4">
-          <Items items={this.state.items}/>
+          <Items items={this.state.items} editItem={this.editItem}/>
         </div>
       </div>
     )

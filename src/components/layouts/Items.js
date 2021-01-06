@@ -6,7 +6,8 @@ export class Items extends Component {
         return (
             this.props.items.map(item => 
                 // console.log(item.title)
-                <Item key={item.id} title={item.title} />
+                
+                <Item key={item.id} id={item.id} title={item.title} editItem={this.props.editItem} />
             )
         )
     }
