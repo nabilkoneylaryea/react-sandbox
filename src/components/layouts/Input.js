@@ -22,11 +22,14 @@ class Input extends Component {
             input: ''
         }))
     }
+    clearInput(){
+        this.setState({input: ''});
+    }
     render() {
         return (
             <form onSubmit={this.onSubmit} className="m-auto d-inline">
-                <div className="input-group rounded-pill">
-                    <input name="input" className="p-2" type="text" onChange={this.onChange} placeholder="Add Item..." value={this.state.input}/>
+                <div id="input-group" className="input-group rounded-pill">
+                    <input name="input" id="input-bar" className="p-2" type="text" onChange={this.onChange} placeholder="Add Item..." value={this.state.input}/>
                     <button type="submit" className="btn btn-outline-dark">+</button>
                 </div>
             </form>

@@ -58,15 +58,11 @@ class App extends Component {
   }
   // DELETE ITEM
   deleteItem = (id) => {
-    const newItems = this.state.items.filter(item => {
-      return item.id !== id;
-    })
-    console.log(newItems);
-    this.setState(state => ({
-      items: newItems
-    }))
-    console.log('Deleted');
-    console.log(this.state.items);
+    console.log(id);
+    this.setState({
+      items: [...this.state.items.filter(item => item.id !== id)]
+    });
+    
   }
   render() {
     return (
